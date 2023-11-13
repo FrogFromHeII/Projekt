@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    
+    <title>Tabulka produktů</title>
+</head>
+<body>
+    <h1>Tabulka produktů</h1>
+    <div class="store-button-container">
+        <input type="checkbox" class="store-checkbox" id="Albert Hypermarket" value="Albert Hypermarket"> 
+        <label for="Albert Hypermarket" class="button">Albert Hypermarket</label>
+        <input type="checkbox" class="store-checkbox" id="Lidl" value="Lidl"> 
+        <label for="Lidl" class="button">Lidl</label>
+    </div>
+    <div class="category-button-container">
+        {% for item in kategorie %}
+            <input type="checkbox" class="category-checkbox" id="{{item}}" value="{{item}}"> 
+            <label for="{{item}}" class="button">{{item}}</label>
+        {% endfor %}
+    </div>
+    <table class="product-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Foto</th>
+                <th>Jméno</th>
+                <th>Vybrané druhy</th>
+                <th>Cena</th>
+                <th>popis</th>
+                <th>Datum</th>
+                <th>EAN</th>
+                <th>Čárový kód</th>
+                <th>Prodejna</th>
+                <th>Katogorie</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in produkty %}
+                <tr class="product-row">
+                    <th>{{ item.id }}</th>
+                    <th><img src="{{ item.picture }}" class="itemPicture" alt="{{ item.name }}"></th>
+                    <th data-url="{{ item.link }}" class="clickable-name">{{ item.name }}
+                    <th>{{ item.etc }}</th>
+                    <th>{{ item.price }}</th>
+                    <th>{{ item.bonus_card }}</th>
+                    <th>{{ item.date }}</th>
+                    <th>{{ item.ean }}</th>
+                    <th><svg id="barcode-{{ item.id }}"></svg></th>  
+                    <th class="product-store">{{ item.store }}</th>
+                    <th class="product-category">{{ item.category }}</th>
+                </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <script src="static/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <script src="static/barcode.js"></script>
+    {% for item in produkty %}
+    <script>
+        generateBarcode("barcode-{{ item.id }}", "{{ item.ean }}");
+        click_url("{{ item.name }}");
+    </script>
+    {% endfor %}
+    <script>
+        const names = document.querySelectorAll('.clickable-name');
+        names.forEach(name => {
+            name.addEventListener('click', function() {
+                window.open(this.dataset.url, '_blank');
+            });
+        });
+    </script>
+    </body>
+    </html>

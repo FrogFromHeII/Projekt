@@ -1,0 +1,97 @@
+/* Resetování výchozích stylů prohlížeče */
+body, h1, table {
+    margin: 0;
+    padding: 0;
+}
+/* Základní styly pro tělo stránky */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+/* Nadpis */
+h1 {
+    margin-bottom: 20px;
+}
+/*úprava hlavičky*/
+.product-table th {
+    background-color: #333;
+    color: #fff;
+}
+/* Tabulka produktů */
+.product-table {
+    width: 100%;
+    table-layout: fixed;
+}
+/*pevné rozložení tabulky*/
+.product-table th:nth-child(1) { width: 3%  ; } /* ID */
+.product-table th:nth-child(2) { width: 10%; } /* Foto */
+.product-table th:nth-child(3) { width: 10%; } /* Jméno */
+.product-table th:nth-child(4) { width: 7%; } /* Vybrané druhy */
+.product-table th:nth-child(5) { width: 5%; } /* Cena */
+.product-table th:nth-child(6) { width: 7%; } /* popis */
+.product-table th:nth-child(7) { width: 5%; } /* Datum */
+.product-table th:nth-child(8) { width: 12%; } /* EAN */
+.product-table th:nth-child(9) { width: 23%; } /* Čárový kód */
+.product-table th:nth-child(10) { width: 10%; } /* Prodejna */
+.product-table th:nth-child(11) { width: 8%; } /* Kategorie */
+/* Odsazení obsahu buněk tabulky od jejich okrajů */
+.product-table th, .product-table td {
+    padding: 10px;
+}
+/* Tlačítka na filtrování */
+.filter-button {
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+/* Skryjte checkboxy */
+input[type="checkbox"] {
+    display: none;
+}
+/* Styl tlačítek */
+.button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    margin: 1px;
+}
+/* Změna barvy tlačítka při zaškrtnutí checkboxu */
+input[type="checkbox"]:checked + .button {
+    background-color: #e74c3c;
+}
+/* Kontejner pro tlačítka */
+.category-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centruje tlačítka na střed */
+}
+/*uprava položky ve sloupci jméno*/
+.clickable-name {
+    cursor: pointer;
+    text-decoration: underline;
+}
+/*úprava veliksoti obrázku*/
+.itemPicture {
+    width: 100px;
+    height: auto;
+}
+/* snaha o úpravu na malé obrazovce */
+/* dodělat */
+@media (max-width: 720px) {
+    .product-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .product-row th {
+        font-size: 14px;
+      }}
