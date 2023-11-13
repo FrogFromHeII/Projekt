@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from databaze import Databaze
-from test import WebScraper
+from webscraper import WebScraper
 from proxymanager import ProxyManager
 from config import DB_CONFIG
 from multiprocessing import Process
