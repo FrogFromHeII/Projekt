@@ -36,7 +36,7 @@ def job():
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
     start_time = time.time()
     urls = [
-["Mléčné výrobky", [###"]
+["Mléčné výrobky", ["###"]
 ]
     processes = []
     delay = 0
