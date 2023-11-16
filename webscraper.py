@@ -80,7 +80,7 @@ class WebScraper:
         'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36',
         'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0'
     ]
-        rounds = 3
+        rounds = 2
         firstRequest = False
         secondRequest = 0
         thirdRequest = 0
