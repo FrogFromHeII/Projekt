@@ -36,30 +36,7 @@ def job():
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
     start_time = time.time()
     urls = [
-    ["Mléčné výrobky", ["http://www.akcniceny.cz/zbozi/albert+lidl/mlecne-vyrobky/"]],
-    ["OZ", ["http://www.akcniceny.cz/zbozi/albert+lidl/ovoce/", "http://www.akcniceny.cz/zbozi/albert+lidl/zelenina/"]],
-    ["Maso", ["http://www.akcniceny.cz/zbozi/albert+lidl/maso/"]],
-    ["Chlazené", ["http://www.akcniceny.cz/zbozi/albert+lidl/uzeniny-lahudky/", "http://www.akcniceny.cz/zbozi/albert+lidl/ostatni-chlazene/"]],
-    ["Alkohol", ["http://www.akcniceny.cz/zbozi/albert+lidl/napoje-alkoholicke/"]],
-    ["Nealko", ["http://www.akcniceny.cz/zbozi/albert+lidl/napoje-nealkoholicke/", "http://www.akcniceny.cz/zbozi/albert+lidl/teple-napoje/"]],
-    ["Pečivo", ["http://www.akcniceny.cz/zbozi/albert+lidl/pecivo/"]],
-    ["GR zbytek", ["http://www.akcniceny.cz/zbozi/albert+lidl/trvanlive/testoviny/", 'http://www.akcniceny.cz/zbozi/albert+lidl/trvanlive/ryze/', 'http://www.akcniceny.cz/zbozi/albert+lidl/trvanlive/lusteniny/', 'http://www.akcniceny.cz/zbozi/albert+lidl/trvanlive/konzervy-instatni-jidla/', 'http://www.akcniceny.cz/zbozi/albert+lidl/trvanlive/sterilizovane-ovoce-a-zelenina/', 'http://www.akcniceny.cz/zbozi/albert+lidl/trvanlive/musli-kase-cerealie/']],
-    ["Sladké", ["http://www.akcniceny.cz/zbozi/albert+lidl/cukrovinky-pochutiny/"]],
-    ["Mražené", ["http://www.akcniceny.cz/zbozi/albert+lidl/mrazene-zbozi/"]],
-    ["Pečení", ["http://www.akcniceny.cz/zbozi/albert+lidl/dochucovadla/", 'http://www.akcniceny.cz/zbozi/albert+lidl/trvanlive/mouka/', 'http://www.akcniceny.cz/zbozi/albert+lidl/trvanlive/cukr/', 'http://www.akcniceny.cz/zbozi/albert+lidl/trvanlive/olej/', 'http://www.akcniceny.cz/zbozi/albert+lidl/trvanlive/sul/']],
-    ["Děti", ["http://www.akcniceny.cz/zbozi/albert+lidl/detska-vyziva/", "http://www.akcniceny.cz/zbozi/albert+lidl/plenky/"]],
-    ["Ostatní", ["http://www.akcniceny.cz/zbozi/albert+lidl/ostatni-potraviny/", "http://www.akcniceny.cz/zbozi/albert+lidl/ostatni-ostatni/"]],
-    ["Prádelna", ["http://www.akcniceny.cz/zbozi/albert+lidl/praci-prostredky/"]],
-    ["Toaletní papír", ["http://www.akcniceny.cz/zbozi/albert+lidl/toaletni-papir-kapesniky/"]],
-    ["Úklid", ["http://www.akcniceny.cz/zbozi/albert+lidl/cistici-prostredky/", "http://www.akcniceny.cz/zbozi/albert+lidl/myti-nadobi/"]],
-    ["Péče o tělo", ["http://www.akcniceny.cz/zbozi/albert+lidl/pece-o-telo/"]],
-    ["Péče o vlasy", ["http://www.akcniceny.cz/zbozi/albert+lidl/pece-o-vlasy/"]],
-    ["Péče o pleť", ["http://www.akcniceny.cz/zbozi/albert+lidl/pece-o-plet/"]],
-    ["Dentální hygiena", ["http://www.akcniceny.cz/zbozi/albert+lidl/pece-o-zuby/"]],
-    ["Dámská hygiena", ["http://www.akcniceny.cz/zbozi/albert+lidl/damska-hygiena/"]],
-    ["Ostatní HB", ["http://www.akcniceny.cz/zbozi/albert+lidl/ostatni-drogerie/"]],
-    ["Sezóna", ["http://www.akcniceny.cz/zbozi/albert+lidl/sezona/"]],
-    ["Mazlíčci", ["http://www.akcniceny.cz/zbozi/albert+lidl/domaci-mazlicci/"]]
+# urls
 ]
     processes = []
     delay = 0
