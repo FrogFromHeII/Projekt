@@ -32,8 +32,6 @@ class Databaze:
             add_data = (f"INSERT INTO produkty (picture, name, link, etc, price, bonus_card, date, ean, store, category) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
             self.cursor.execute(add_data, data)
             self.db.commit()
-
-
 # Odstraní data z databáze se starým datem
     def remove_old_data(self):
         today = datetime.today().strftime('%Y-%m-%d')
