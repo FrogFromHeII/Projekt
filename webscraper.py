@@ -143,11 +143,3 @@ class WebScraper:
                         continue
             rounds -= 1
         return self.text_list
-
-if __name__ == "__main__":
-    start_time = time.time()
-    scraper = WebScraper("http://www.akcniceny.cz", "Ostatní")
-    data = scraper.scrape("http://www.akcniceny.cz/zbozi/albert+lidl/pece-o-plet/")
-    print(data)
-    end_time = time.time()
-    celkem = start_time - end_time
