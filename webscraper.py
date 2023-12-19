@@ -44,7 +44,9 @@ class WebScraper:
             store = BeautifulSoup(data_bs_content['data-bs-content'], 'html.parser').get_text() if data_bs_content else None
             if store is None:
                 store = product.find(class_="col-12 fs-18 fs-m-15 fw-bold mb-0").text
-            if store == "Albert Hypermarket" or store == "Lidl":
+            if  "Albert Hypermarket" in store or store == "Lidl" :
+                if "Albert Supermarket," in store:
+                    store = store.replace(store, "Albert Hypermarket")
                 to_date_element = product.find("p", class_="mb-0 text-muted fs-10 mb-1", itemprop="priceValidUntil")
                 date = to_date_element["content"] if to_date_element else None
                 product_name_element = soup.find("h1", class_="nadpis-zbozi", itemprop="name")
@@ -80,7 +82,7 @@ class WebScraper:
         'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36',
         'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0'
     ]
-        rounds = 2
+        rounds = 3
         firstRequest = False
         secondRequest = 0
         thirdRequest = 0
